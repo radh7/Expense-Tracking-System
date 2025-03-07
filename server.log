@@ -1,0 +1,3 @@
+2025-03-02 02:23:18,150 - __main__ - INFO - fetch_annual_expense_summary called for year: 2024
+2025-03-02 02:24:14,881 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2024
+2025-03-02 02:25:01,173 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2024

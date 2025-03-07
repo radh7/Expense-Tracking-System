@@ -1,0 +1,405 @@
+2025-03-02 20:20:15,293 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:20:15,294 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:20:15,426 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:20:15,497 - server.py - INFO - Fetching monthly analytics for 3-2025
+2025-03-02 20:20:15,497 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 3, year: 2025
+2025-03-02 20:20:15,528 - server.py - INFO - Returning 1 records for monthly analytics
+2025-03-02 20:20:25,505 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:20:25,506 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:20:25,524 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:20:25,608 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:20:25,608 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:20:25,622 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:20:29,824 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:20:29,826 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:20:29,841 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:20:29,872 - server.py - INFO - Fetching analytics for range: 2025-03-02 to 2025-03-02
+2025-03-02 20:20:29,872 - db_helper.py - INFO - fetch_expense_summary called for start_date: 2025-03-02, end_date: 2025-03-02
+2025-03-02 20:20:29,883 - server.py - INFO - Returning 1 records for date range analytics
+2025-03-02 20:20:29,923 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:20:29,923 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:20:29,934 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:24:25,450 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:24:25,451 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:24:32,888 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:24:32,889 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:24:32,909 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:24:32,993 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:24:32,993 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:24:33,010 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:24:33,145 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:24:33,145 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:28:26,851 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:28:26,855 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:28:26,976 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:28:26,995 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:28:26,995 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:28:27,006 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:28:27,114 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:28:27,114 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:28:32,904 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:28:32,906 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:28:32,925 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:28:32,940 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:28:32,940 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:28:32,955 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:28:33,001 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:28:33,001 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:28:33,063 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:28:33,063 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:28:33,075 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:28:33,083 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:28:33,084 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:28:33,092 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:28:33,132 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:28:33,132 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:28:35,150 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:28:35,151 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:28:35,163 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:28:35,185 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:28:35,185 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:28:35,197 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:28:35,239 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:28:35,239 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:28:35,290 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:28:35,290 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:28:35,307 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:28:35,313 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:28:35,314 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:28:35,324 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:28:35,352 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:28:35,352 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:28:37,128 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:28:37,128 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:28:37,140 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:28:37,155 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:28:37,155 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:28:37,165 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:28:37,202 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:28:37,202 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:28:37,249 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:28:37,249 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:28:37,261 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:28:37,268 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:28:37,268 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:28:37,280 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:28:37,318 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:28:37,318 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:28:39,316 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:28:39,316 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:28:39,331 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:28:39,355 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:28:39,356 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:28:39,371 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:28:39,404 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:28:39,404 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:28:39,450 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:28:39,451 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:28:39,460 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:28:39,467 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:28:39,467 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:28:39,481 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:28:39,509 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:28:39,510 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:28:45,596 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:28:45,597 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:28:45,613 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:28:45,649 - server.py - INFO - Fetching analytics for range: 2025-03-02 to 2025-03-02
+2025-03-02 20:28:45,650 - db_helper.py - INFO - fetch_expense_summary called for start_date: 2025-03-02, end_date: 2025-03-02
+2025-03-02 20:28:45,674 - server.py - INFO - Returning 1 records for date range analytics
+2025-03-02 20:28:45,716 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:28:45,717 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:28:45,728 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:28:45,755 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:28:45,755 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:29:27,829 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:29:27,831 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:29:27,853 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:29:27,872 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:29:27,874 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:29:27,897 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:29:28,005 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:29:28,005 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:29:32,456 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:29:32,457 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:29:32,482 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:29:32,508 - server.py - INFO - Fetching analytics for range: 2025-03-02 to 2025-03-02
+2025-03-02 20:29:32,508 - db_helper.py - INFO - fetch_expense_summary called for start_date: 2025-03-02, end_date: 2025-03-02
+2025-03-02 20:29:32,523 - server.py - INFO - Returning 1 records for date range analytics
+2025-03-02 20:29:32,573 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:29:32,573 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:29:32,586 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:29:32,616 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:29:32,616 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:29:36,922 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:29:36,922 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:29:36,945 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:29:36,972 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:29:36,972 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:29:36,984 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:29:37,030 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:29:37,030 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:29:38,680 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:29:38,680 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:29:38,691 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:29:38,709 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:29:38,709 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:29:38,721 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:29:38,757 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:29:38,757 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:29:39,701 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:29:39,701 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:29:39,714 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:29:39,730 - server.py - INFO - Fetching analytics for range: 2025-03-01 to 2025-03-02
+2025-03-02 20:29:39,731 - db_helper.py - INFO - fetch_expense_summary called for start_date: 2025-03-01, end_date: 2025-03-02
+2025-03-02 20:29:39,743 - server.py - INFO - Returning 1 records for date range analytics
+2025-03-02 20:29:39,778 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:29:39,778 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:29:39,792 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:29:39,820 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:29:39,820 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:29:41,332 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:29:41,333 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:29:41,345 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:29:41,363 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:29:41,363 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:29:41,374 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:29:41,410 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:29:41,410 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:29:42,776 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:29:42,776 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:29:42,788 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:29:42,810 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:29:42,810 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:29:42,818 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:29:42,849 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:29:42,850 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:29:43,434 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:29:43,434 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:29:43,450 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:29:43,505 - server.py - INFO - Fetching analytics for range: 2025-02-01 to 2025-03-02
+2025-03-02 20:29:43,505 - db_helper.py - INFO - fetch_expense_summary called for start_date: 2025-02-01, end_date: 2025-03-02
+2025-03-02 20:29:43,515 - server.py - INFO - Returning 5 records for date range analytics
+2025-03-02 20:29:43,548 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:29:43,549 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:29:43,561 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:29:43,594 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:29:43,594 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:31:09,009 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:31:09,011 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:31:09,047 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:31:09,088 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:31:09,092 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:31:09,104 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:31:09,174 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:31:09,174 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:31:13,588 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:31:13,589 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:31:13,611 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:31:13,638 - server.py - INFO - Fetching analytics for range: 2025-02-01 to 2025-03-02
+2025-03-02 20:31:13,638 - db_helper.py - INFO - fetch_expense_summary called for start_date: 2025-02-01, end_date: 2025-03-02
+2025-03-02 20:31:13,659 - server.py - INFO - Returning 5 records for date range analytics
+2025-03-02 20:31:13,724 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:31:13,725 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:31:13,734 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:31:13,763 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:31:13,763 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:31:37,356 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:31:37,357 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:31:37,382 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:31:37,399 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:31:37,399 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:31:37,417 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:31:37,498 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:31:37,498 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:31:40,549 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:31:40,551 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:31:40,578 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:31:40,593 - server.py - INFO - Fetching analytics for range: 2025-02-01 to 2025-03-02
+2025-03-02 20:31:40,593 - db_helper.py - INFO - fetch_expense_summary called for start_date: 2025-02-01, end_date: 2025-03-02
+2025-03-02 20:31:40,607 - server.py - INFO - Returning 5 records for date range analytics
+2025-03-02 20:31:40,666 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:31:40,666 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:31:40,676 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:31:40,711 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:31:40,711 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:33:58,406 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:33:58,413 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:33:58,546 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:33:58,572 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:33:58,573 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:33:58,586 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:33:58,689 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:33:58,689 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:34:39,477 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:34:39,479 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:34:39,584 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:34:39,607 - server.py - INFO - Fetching monthly analytics for 3-2025
+2025-03-02 20:34:39,607 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 3, year: 2025
+2025-03-02 20:34:39,652 - server.py - INFO - Returning 1 records for monthly analytics
+2025-03-02 20:37:34,113 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:37:34,116 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:37:34,235 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:37:34,261 - server.py - INFO - Fetching monthly analytics for 3-2025
+2025-03-02 20:37:34,261 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 3, year: 2025
+2025-03-02 20:37:34,276 - server.py - INFO - Returning 1 records for monthly analytics
+2025-03-02 20:37:34,368 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:37:34,368 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:37:36,935 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:37:36,935 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:37:36,948 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:37:36,968 - server.py - INFO - Fetching analytics for range: 2025-03-02 to 2025-03-02
+2025-03-02 20:37:36,968 - db_helper.py - INFO - fetch_expense_summary called for start_date: 2025-03-02, end_date: 2025-03-02
+2025-03-02 20:37:36,990 - server.py - INFO - Returning 1 records for date range analytics
+2025-03-02 20:38:14,590 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:38:14,593 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:38:14,682 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:38:14,705 - server.py - INFO - Fetching monthly analytics for 3-2025
+2025-03-02 20:38:14,705 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 3, year: 2025
+2025-03-02 20:38:14,714 - server.py - INFO - Returning 1 records for monthly analytics
+2025-03-02 20:38:14,766 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:38:14,766 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:38:17,112 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:38:17,113 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:38:17,128 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:38:17,149 - server.py - INFO - Fetching analytics for range: 2025-03-02 to 2025-03-02
+2025-03-02 20:38:17,149 - db_helper.py - INFO - fetch_expense_summary called for start_date: 2025-03-02, end_date: 2025-03-02
+2025-03-02 20:38:17,163 - server.py - INFO - Returning 1 records for date range analytics
+2025-03-02 20:38:17,196 - server.py - INFO - Fetching monthly analytics for 3-2025
+2025-03-02 20:38:17,197 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 3, year: 2025
+2025-03-02 20:38:17,208 - server.py - INFO - Returning 1 records for monthly analytics
+2025-03-02 20:38:17,229 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:38:17,229 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:38:21,528 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:38:21,529 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:38:21,540 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:38:21,558 - server.py - INFO - Fetching monthly analytics for 3-2025
+2025-03-02 20:38:21,558 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 3, year: 2025
+2025-03-02 20:38:21,581 - server.py - INFO - Returning 1 records for monthly analytics
+2025-03-02 20:38:21,613 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:38:21,613 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:38:23,255 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:38:23,255 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:38:23,269 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:38:23,290 - server.py - INFO - Fetching monthly analytics for 3-2025
+2025-03-02 20:38:23,290 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 3, year: 2025
+2025-03-02 20:38:23,300 - server.py - INFO - Returning 1 records for monthly analytics
+2025-03-02 20:38:23,325 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:38:23,325 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:38:24,064 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:38:24,064 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:38:24,075 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:38:24,087 - server.py - INFO - Fetching analytics for range: 2025-02-02 to 2025-03-02
+2025-03-02 20:38:24,087 - db_helper.py - INFO - fetch_expense_summary called for start_date: 2025-02-02, end_date: 2025-03-02
+2025-03-02 20:38:24,098 - server.py - INFO - Returning 5 records for date range analytics
+2025-03-02 20:38:24,147 - server.py - INFO - Fetching monthly analytics for 3-2025
+2025-03-02 20:38:24,147 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 3, year: 2025
+2025-03-02 20:38:24,159 - server.py - INFO - Returning 1 records for monthly analytics
+2025-03-02 20:38:24,178 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:38:24,179 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:38:32,839 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:38:32,840 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:38:32,860 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:38:32,910 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:38:32,911 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:38:32,922 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:38:32,971 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:38:32,971 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 20:38:36,953 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 20:38:36,953 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 20:38:36,968 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 20:38:36,985 - server.py - INFO - Fetching analytics for range: 2025-02-02 to 2025-03-02
+2025-03-02 20:38:36,985 - db_helper.py - INFO - fetch_expense_summary called for start_date: 2025-02-02, end_date: 2025-03-02
+2025-03-02 20:38:37,012 - server.py - INFO - Returning 5 records for date range analytics
+2025-03-02 20:38:37,064 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 20:38:37,064 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 20:38:37,074 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 20:38:37,108 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 20:38:37,109 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 21:30:35,431 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 21:30:35,436 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 21:30:35,565 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 21:30:35,597 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 21:30:35,597 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 21:30:35,610 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 21:30:35,703 - server.py - INFO - Fetching annual analytics for year_value=1977
+2025-03-02 21:30:35,704 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 1977
+2025-03-02 21:30:35,719 - server.py - WARNING - No data found for year_value=1977
+2025-03-02 21:30:39,153 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 21:30:39,153 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 21:30:39,166 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 21:30:39,183 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 21:30:39,183 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 21:30:39,196 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 21:30:39,241 - server.py - INFO - Fetching annual analytics for year_value=1994
+2025-03-02 21:30:39,241 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 1994
+2025-03-02 21:30:39,250 - server.py - WARNING - No data found for year_value=1994
+2025-03-02 21:30:40,296 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 21:30:40,296 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 21:30:40,313 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 21:30:40,331 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 21:30:40,332 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 21:30:40,350 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 21:30:40,381 - server.py - INFO - Fetching annual analytics for year_value=2016
+2025-03-02 21:30:40,382 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2016
+2025-03-02 21:30:40,398 - server.py - WARNING - No data found for year_value=2016
+2025-03-02 21:30:41,460 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 21:30:41,461 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 21:30:41,477 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 21:30:41,497 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 21:30:41,497 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 21:30:41,511 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 21:30:41,551 - server.py - INFO - Fetching annual analytics for year_value=2029
+2025-03-02 21:30:41,551 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2029
+2025-03-02 21:30:41,562 - server.py - WARNING - No data found for year_value=2029
+2025-03-02 21:31:29,498 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 21:31:29,502 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 21:31:29,520 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 21:31:29,538 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 21:31:29,538 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 21:31:29,549 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 21:31:29,627 - server.py - INFO - Fetching annual analytics for year_value=2028
+2025-03-02 21:31:29,627 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2028
+2025-03-02 21:31:29,641 - server.py - WARNING - No data found for year_value=2028
+2025-03-02 21:31:30,179 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 21:31:30,179 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 21:31:30,191 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 21:31:30,214 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 21:31:30,214 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 21:31:30,225 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 21:31:30,260 - server.py - INFO - Fetching annual analytics for year_value=2023
+2025-03-02 21:31:30,261 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2023
+2025-03-02 21:31:30,271 - server.py - WARNING - No data found for year_value=2023
+2025-03-02 21:31:30,498 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 21:31:30,498 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 21:31:30,514 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 21:31:30,532 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 21:31:30,532 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 21:31:30,541 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 21:31:30,578 - server.py - INFO - Fetching annual analytics for year_value=2024
+2025-03-02 21:31:30,578 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2024
+2025-03-02 21:31:30,590 - server.py - WARNING - No data found for year_value=2024
+2025-03-02 21:31:31,332 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 21:31:31,332 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 21:31:31,346 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 21:31:31,367 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 21:31:31,367 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 21:31:31,378 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 21:31:31,416 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 21:31:31,416 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 21:31:34,513 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 21:31:34,514 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 21:31:34,529 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 21:31:34,551 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 21:31:34,552 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 21:31:34,568 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 21:31:34,603 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 21:31:34,604 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
+2025-03-02 21:31:34,657 - server.py - INFO - Fetching expenses for date: 2025-03-02
+2025-03-02 21:31:34,657 - db_helper.py - INFO - fetch_expenses_for_date called for 2025-03-02
+2025-03-02 21:31:34,669 - server.py - INFO - Returning 1 expenses for 2025-03-02
+2025-03-02 21:31:34,677 - server.py - INFO - Fetching monthly analytics for 2-2025
+2025-03-02 21:31:34,677 - db_helper.py - INFO - fetch_monthly_expense_summary called for month: 2, year: 2025
+2025-03-02 21:31:34,687 - server.py - INFO - Returning 5 records for monthly analytics
+2025-03-02 21:31:34,715 - server.py - INFO - Fetching annual analytics for year_value=2025
+2025-03-02 21:31:34,715 - db_helper.py - INFO - fetch_annual_expense_summary called for year: 2025
