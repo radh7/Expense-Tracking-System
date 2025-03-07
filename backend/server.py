@@ -1,143 +1,167 @@
-from fastapi import FastAPI, HTTPException
-from datetime import date
-from typing import List
-import db_helper
-from pydantic import BaseModel, Field
-import os
+import mysql.connector
+from contextlib import contextmanager
 from logger_setup import logger_setup
+import os
+from datetime import datetime
 
-# 🎯 Initialize FastAPI
-app = FastAPI()
-
-# 🔹 Setup Logging
 logger = logger_setup(os.path.basename(__file__))
 
-# 🎯 Pydantic Models
-class Expense(BaseModel):
-    amount: float
-    category: str
-    notes: str
+@contextmanager
+def get_db_connection(my_host="localhost", my_user="root", my_database="expense_manager",my_password="SSRI9977",commit=False):
+    # Establish connection to MySQL
+    connection = mysql.connector.connect(
+        host= my_host,
+        user= my_user,
+        password=my_password,
+        database= my_database,
+    )
+    if connection.is_connected():
+        cursor = connection.cursor(dictionary=True)
+        yield cursor
 
-class DateRange(BaseModel):
-    start_date: date
-    end_date: date
+    if commit:
+        connection.commit()
 
-class YearRequest(BaseModel):
-    year_value: int = Field(..., ge=1000, le=9999, description="Valid year (1000-9999)")
-
-# 🎯 Response Model
-class ExpenseResponse(BaseModel):
-    message: str
-
-# 📌 **Handle Expense Fetching**
-@app.get("/expenses/{expense_date}")
-def get_expenses(expense_date: date):
+    cursor.close()
+    connection.close()
+    return None
+#Whole Data
+def fetch_all():
+    logger.info('fetch_all called')
     try:
-        logger.info(f"Fetching expenses for date: {expense_date}")
-        response = db_helper.fetch_expenses_for_date(expense_date)
+        with get_db_connection() as cursor:
+            if cursor is None:
+                print("No Cursor Found")
+                return
 
-        if not response:
-            logger.warning(f"No expenses found for {expense_date}")
-            return {"message": "No expenses available for the date"}
-        
-        logger.info(f"Returning {len(response)} expenses for {expense_date}")
-        return response
-    except Exception as e:
-        logger.error(f"Error fetching expenses: {str(e)}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"Server Error: {str(e)}")
+            cursor.execute("SELECT * FROM expenses;")
 
-# 📌 **Handle Expense Addition**
-@app.post("/expenses/{expense_date}", response_model=ExpenseResponse)
-def add_or_update_expenses(expense_date: date, expenses: List[Expense]):
+            # Fetch and print all rows
+            expenses = cursor.fetchall()
+            for expense in expenses:
+                print(expense)
+
+    except mysql.connector.Error as e:
+        print("Error:", e)
+
+#Specific Date data
+def fetch_expenses_for_date(expense_date):
+    logger.info(f'fetch_expenses_for_date called for {expense_date}')
+    try :
+        with get_db_connection() as cursor:
+            if cursor is None:
+                print("No Cursor Found")
+                return
+
+            cursor.execute("SELECT * FROM expenses WHERE expense_date = %s;" ,(expense_date,))
+            # Fetch and print all rows
+            expenses = cursor.fetchall()
+            return expenses
+
+    except mysql.connector.Error as e:
+        print("Error:", e)
+
+#Inserting New Expense
+def insert_expenses_for_date(expense_date,amount,category,notes=None):
+    logger.info(f'insert_expenses_for_date callled for date: {expense_date}, amount: {amount}, category: {category}')
+    try :
+        with get_db_connection(commit=True) as cursor:
+            if cursor is None:
+                print("No Cursor Found")
+                return
+
+            cursor.execute("INSERT INTO expenses (expense_date,amount,category,notes) VALUES (%s, %s, %s, %s)",
+                           (expense_date,amount,category,notes)
+                           )
+    except mysql.connector.Error as e:
+        print("Error:", e)
+
+#Deleting the Expense for a particular date
+def delete_expenses_for_date(expense_date):
+    logger.info(f'delete_expenses_for_date callled for date: {expense_date}')
+    try :
+        with get_db_connection(commit=True) as cursor:
+            if cursor is None:
+                print("No Cursor Found")
+                return
+
+            cursor.execute("DELETE FROM expenses where expense_date = %s",
+                           (expense_date,)
+                           )
+
+    except mysql.connector.Error as e:
+        print("Error:", e)
+
+#fetching summary in a range
+def fetch_expense_summary(start_date, end_date):
+    logger.info(f'fetch_expense_summary called for start_date: {start_date}, end_date: {end_date}')
+    try :
+        with get_db_connection() as cursor:
+            if cursor is None:
+                print("No Cursor Found")
+                return
+
+            cursor.execute('''
+                                SELECT category, SUM(AMOUNT) as total_expenses
+                                FROM expenses WHERE expense_date 
+                                BETWEEN %s and %s
+                                GROUP BY category;
+                                ''',
+                           (start_date,end_date)
+                           )
+            data = cursor.fetchall()
+            return data
+    except mysql.connector.Error as e:
+        print("Error:", e)
+
+#fetching summary for a specific month
+def fetch_monthly_expense_summary(year):
+    logger.info(f'fetch_monthly_expense_summary called for  year: {year}')
     try:
-        logger.info(f"Adding expenses for {expense_date}: {expenses}")
-        
-        # Remove existing expenses for the date
-        db_helper.delete_expenses_for_date(expense_date)
+        with get_db_connection() as cursor:
+            if cursor is None:
+                print("No Cursor Found")
+                return
 
-        # Insert new expenses
-        for expense in expenses:
-            db_helper.insert_expenses_for_date(expense_date, expense.amount, expense.category, expense.notes)
+            cursor.execute(
+                '''
+                SELECT DATE_FORMAT(expense_date, '%M') AS month, 
+                       SUM(amount) AS total_amount 
+                FROM expenses 
+                WHERE YEAR(expense_date) = %s
+                GROUP BY MONTH(expense_date), DATE_FORMAT(expense_date, '%M')
+                ORDER BY MONTH(expense_date);
+                ''',
+                (year,)
+            )
 
-        logger.info(f"Successfully added {len(expenses)} expenses for {expense_date}")
-        return {"message": "Expenses added successfully"}
-    except Exception as e:
-        logger.error(f"Error adding expenses: {str(e)}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"Server Error: {str(e)}")
+            data = cursor.fetchall()
+            return data
+    except mysql.connector.Error as e:
+        print("Error:", e)
 
-# 📌 **Handle Date Range Analytics**
-@app.post("/analytics")
-def get_analytics(date_range: DateRange):
-    try:
-        logger.info(f"Fetching analytics for range: {date_range.start_date} to {date_range.end_date}")
-        data = db_helper.fetch_expense_summary(date_range.start_date, date_range.end_date)
+#fetching the summary for the year
+def fetch_annual_expense_summary():
+    logger.info(f'fetch_annual_expense_summary called for all years')
+    try :
+        with get_db_connection() as cursor:
+            if cursor is None:
+                print("No Cursor Found")
+                return
 
-        if not data:
-            logger.warning("No data available for the given period")
-            return {"message": "No data available for this period."}
+            cursor.execute(
+                '''
+                        SELECT YEAR(expense_date) AS year, SUM(amount) AS total_amount 
+                        FROM expenses 
+                        GROUP BY YEAR(expense_date)
+                        ORDER BY YEAR(expense_date);
+                        ''')
+            data = cursor.fetchall()
+            return data
+    except mysql.connector.Error as e:
+        print("Error:", e)
 
-        logger.info(f"Returning {len(data)} records for date range analytics")
-            
-        return { row['category']:
-                     {"total_expenses": row["total_expenses"]}
-                for row in data
-            }
-    except Exception as e:
-        logger.error(f"Error fetching date range analytics: {str(e)}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"Server Error: {str(e)}")
-
-# 📊 **Handle Monthly Analytics**
-@app.post("/analytics/month")
-def get_analytics_for_month(year: YearRequest):
-    try:
-        logger.info(f"Fetching monthly analytics for {year.year_value}")
-        expense_summary = db_helper.fetch_monthly_expense_summary(year.year_value)
-
-        if not expense_summary:
-            logger.warning(f"No data found for {year.year_value}")
-            return {"message": "No expense data available for this year."}
-
-        total = sum(row['total_amount'] for row in expense_summary) or 1  # Avoid division by zero
-
-        logger.info(f"Returning {len(expense_summary)} records for monthly analytics")
-        return {
-            row['month']: {
-                "amount": row['total_amount'],
-                "percentage": (row['total_amount'] / total * 100)
-            }
-            for row in expense_summary
-        }
-    except Exception as e:
-        logger.error(f"Error fetching monthly analytics: {str(e)}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"Server Error: {str(e)}")
-
-# 📆 **Handle Annual Analytics**
-@app.post("/analytics/annual")
-def get_annual_analytics():
-    try:
-        logger.info(f"Fetching annual analytics")
-        expense_summary = db_helper.fetch_annual_expense_summary()
-
-        if not expense_summary:
-            logger.warning(f"No data found")
-            return {"message": "No expense data available for this year."}
-
-        total = sum(row['total_amount'] for row in expense_summary) or 1  # Avoid division by zero
-
-        analytics_data = {
-            row['year']: {
-                "amount": row['total_amount'],
-                "percentage": (row['total_amount'] / total * 100)
-            }
-            for row in expense_summary
-        }
-
-        # ✅ Fix: Always include a message and structured data
-        return {
-            "message": "Annual analytics data fetched successfully",
-            "data": analytics_data
-        }
-
-    except Exception as e:
-        logger.error(f"Error fetching annual analytics: {str(e)}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"Server Error: {str(e)}")
+if __name__ == "__main__":
+    expense_summary = fetch_expenses_for_date("2025-02-01")
+    for summary in expense_summary:
+        print(summary)
