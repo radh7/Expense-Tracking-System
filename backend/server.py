@@ -22,9 +22,6 @@ class DateRange(BaseModel):
     start_date: date
     end_date: date
 
-class MonthRequest(BaseModel):
-    year_value: int = Field(..., ge=1000, le=9999, description="Valid year (1000-9999)")
-
 class YearRequest(BaseModel):
     year_value: int = Field(..., ge=1000, le=9999, description="Valid year (1000-9999)")
 
@@ -91,13 +88,13 @@ def get_analytics(date_range: DateRange):
 
 # 📊 **Handle Monthly Analytics**
 @app.post("/analytics/month")
-def get_analytics_for_month(month: MonthRequest):
+def get_analytics_for_month(year: YearRequest):
     try:
-        logger.info(f"Fetching monthly analytics for {month.year_value}")
-        expense_summary = db_helper.fetch_monthly_expense_summary(month.year_value)
+        logger.info(f"Fetching monthly analytics for {year.year_value}")
+        expense_summary = db_helper.fetch_monthly_expense_summary(year.year_value)
 
         if not expense_summary:
-            logger.warning(f"No data found for {month.year_value}")
+            logger.warning(f"No data found for {year.year_value}")
             return {"message": "No expense data available for this year."}
 
         total = sum(row['total_amount'] for row in expense_summary) or 1  # Avoid division by zero
