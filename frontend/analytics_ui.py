@@ -96,7 +96,7 @@ def monthly_analytics_tab():
 
         fig = px.bar(df, x="month", y="total_expenses",
                      title="💰 Monthly Expense Breakdown",
-                     color="month",  # Use an actual column from df
+                     color="month",
                      text="total_expenses")
         st.plotly_chart(fig)
 
@@ -130,9 +130,6 @@ def annual_analytics_tab():
                 st.warning("⚠️ No expenses recorded for this year.")
                 return
 
-
-
-            # **Step 3: Create Bar Chart**
             fig = px.bar(df, x="year", y="amount",
                          title=f"💰Annual Expense Breakdown",
                          color="year",
@@ -147,10 +144,6 @@ def annual_analytics_tab():
 
             st.plotly_chart(fig)
 
-            # Theme switcher
-            if st.button("🎨 Change Color Theme"):
-                switch_theme()
-                st.rerun()
 
         elif response.status_code == 500:
             st.error("⚠️ Server Error: Please try again later.")
