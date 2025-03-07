@@ -23,7 +23,6 @@ class DateRange(BaseModel):
     end_date: date
 
 class MonthRequest(BaseModel):
-    month_value: int = Field(..., ge=1, le=12, description="Month number (1-12)")
     year_value: int = Field(..., ge=1000, le=9999, description="Valid year (1000-9999)")
 
 class YearRequest(BaseModel):
@@ -94,20 +93,20 @@ def get_analytics(date_range: DateRange):
 @app.post("/analytics/month")
 def get_analytics_for_month(month: MonthRequest):
     try:
-        logger.info(f"Fetching monthly analytics for {month.month_value}-{month.year_value}")
-        expense_summary = db_helper.fetch_monthly_expense_summary(month.month_value, month.year_value)
+        logger.info(f"Fetching monthly analytics for {month.year_value}")
+        expense_summary = db_helper.fetch_monthly_expense_summary(month.year_value)
 
         if not expense_summary:
-            logger.warning(f"No data found for {month.month_value}-{month.year_value}")
-            return {"message": "No expense data available for this month."}
+            logger.warning(f"No data found for {month.year_value}")
+            return {"message": "No expense data available for this year."}
 
-        total = sum(row['total_expenses'] for row in expense_summary) or 1  # Avoid division by zero
+        total = sum(row['total_amount'] for row in expense_summary) or 1  # Avoid division by zero
 
         logger.info(f"Returning {len(expense_summary)} records for monthly analytics")
         return {
-            row['category']: {
-                "total": row['total_expenses'],
-                "percentage": (row['total_expenses'] / total * 100)
+            row['month']: {
+                "amount": row['total_amount'],
+                "percentage": (row['total_amount'] / total * 100)
             }
             for row in expense_summary
         }
@@ -117,21 +116,21 @@ def get_analytics_for_month(month: MonthRequest):
 
 # 📆 **Handle Annual Analytics**
 @app.post("/analytics/annual")
-def get_annual_analytics(year: YearRequest):
+def get_annual_analytics():
     try:
-        logger.info(f"Fetching annual analytics for {year}")
-        expense_summary = db_helper.fetch_annual_expense_summary(year.year_value)
+        logger.info(f"Fetching annual analytics")
+        expense_summary = db_helper.fetch_annual_expense_summary()
 
         if not expense_summary:
-            logger.warning(f"No data found for {year}")
+            logger.warning(f"No data found")
             return {"message": "No expense data available for this year."}
 
-        total = sum(row['total_expenses'] for row in expense_summary) or 1  # Avoid division by zero
+        total = sum(row['total_amount'] for row in expense_summary) or 1  # Avoid division by zero
 
         analytics_data = {
-            row['category']: {
-                "total": row['total_expenses'],
-                "percentage": (row['total_expenses'] / total * 100)
+            row['year']: {
+                "amount": row['total_amount'],
+                "percentage": (row['total_amount'] / total * 100)
             }
             for row in expense_summary
         }
