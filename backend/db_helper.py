@@ -2,6 +2,7 @@ import mysql.connector
 from contextlib import contextmanager
 from logger_setup import logger_setup
 import os
+from datetime import datetime
 
 logger = logger_setup(os.path.basename(__file__))
 
@@ -114,8 +115,8 @@ def fetch_expense_summary(start_date, end_date):
         print("Error:", e)
 
 #fetching summary for a specific month
-def fetch_monthly_expense_summary(month=1, year=2025):
-    logger.info(f'fetch_monthly_expense_summary called for month: {month}, year: {year}')
+def fetch_monthly_expense_summary(year):
+    logger.info(f'fetch_monthly_expense_summary called for  year: {year}')
     try:
         with get_db_connection() as cursor:
             if cursor is None:
@@ -124,12 +125,13 @@ def fetch_monthly_expense_summary(month=1, year=2025):
 
             cursor.execute(
                 '''
-                SELECT category, SUM(AMOUNT) as total_expenses
-                FROM expenses
-                WHERE YEAR(expense_date) = %s AND MONTH(expense_date) = %s
-                GROUP BY category;
+                SELECT MONTHNAME(expense_date) AS month, SUM(amount) AS total_amount 
+                FROM expenses 
+                WHERE year(expense_date) = %s
+                GROUP BY MONTH(expense_date), MONTHNAME(expense_date)
+                ORDER BY MONTH(expense_date);
                 ''',
-                (year, month) 
+                (year)
             )
             data = cursor.fetchall()
             return data
@@ -137,8 +139,8 @@ def fetch_monthly_expense_summary(month=1, year=2025):
         print("Error:", e)
 
 #fetching the summary for the year
-def fetch_annual_expense_summary(year):
-    logger.info(f'fetch_annual_expense_summary called for year: {year}')
+def fetch_annual_expense_summary():
+    logger.info(f'fetch_annual_expense_summary called for all years')
     try :
         with get_db_connection() as cursor:
             if cursor is None:
@@ -146,14 +148,12 @@ def fetch_annual_expense_summary(year):
                 return
 
             cursor.execute(
-                            '''
-                            SELECT category, SUM(AMOUNT) as total_expenses
-                            FROM expenses
-                            WHERE YEAR(expense_date) = %s
-                            GROUP BY category;
-                            ''',
-                            (year,)
-                        )
+                '''
+                        SELECT YEAR(expense_date) AS year, SUM(amount) AS total_amount 
+                        FROM expenses 
+                        GROUP BY YEAR(expense_date)
+                        ORDER BY YEAR(expense_date);
+                        ''')
             data = cursor.fetchall()
             return data
     except mysql.connector.Error as e:
