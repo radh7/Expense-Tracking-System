@@ -6,10 +6,16 @@ import pandas as pd
 
 API_url = "http://localhost:8000"
 
-# 🎨 Ensure Theme is Initialized in Session State
+# Initialize session state key if it doesn't exist
 if "color_scheme" not in st.session_state:
-    st.session_state["color_scheme"] = "Pink"  # Default theme
+    st.session_state["color_scheme"] = "Mint"  # Default value
 
+# Now safely access session state
+color_scheme = (
+    px.colors.sequential.Mint
+    if st.session_state["color_scheme"] == "Mint"
+    else px.colors.sequential.Magenta
+)
 # Function to switch theme
 def switch_theme():
     st.session_state["color_scheme"] = "Mint" if st.session_state["color_scheme"] == "Pink" else "Pink"
@@ -67,25 +73,20 @@ def analytics_tab():
 def monthly_analytics_tab():
     st.header("📆 Monthly Expense Analytics")
 
-    month, year = st.columns(2)
-    with month:
-        month_selected = st.selectbox("Select Month:", list(range(1, 13)), index=(datetime.now().month - 1), key="montht_monthly_analytics")
-
-    with year:
-        year_selected = st.number_input("Select Year:", min_value=1900, max_value=2100, value=datetime.now().year, step=1, key="year_monthly_analytics")
+    year_selected = st.number_input("Select Year:", min_value=1900, max_value=2100, value=datetime.now().year, step=1, key="year_monthly_analytics")
 
     #if st.button("📊 Get Monthly Analytics"):
-    payload = {"month_value": month_selected, "year_value": year_selected}
+    payload = {"year_value": year_selected}
     response = requests.post(f"{API_url}/analytics/month", json=payload)
 
     if response.status_code == 200:
         response_data = response.json()
         if "message" in response_data:
-            st.warning("⚠️ No expense data available for this month.")
+            st.warning("⚠️ No expense data available for this year.")
             return
 
         df = pd.DataFrame([
-            {"category": key, "total_expenses": value.get("total", 0)}
+            {"month": key, "total_expenses": value.get("amount", 0)}
             for key, value in response_data.items()
             ])
 
@@ -93,10 +94,10 @@ def monthly_analytics_tab():
             st.warning("⚠️ No expenses recorded for this month.")
             return
 
-        fig = px.bar(df, x="category", y="total_expenses",
-                         title="💰 Monthly Expense Breakdown",
-                         color="category",
-                         text="total_expenses")
+        fig = px.bar(df, x="month", y="total_expenses",
+                     title="💰 Monthly Expense Breakdown",
+                     color="month",  # Use an actual column from df
+                     text="total_expenses")
         st.plotly_chart(fig)
 
     elif response.status_code == 500:
@@ -105,51 +106,53 @@ def monthly_analytics_tab():
         st.error(f"❌ Unexpected Error {response.status_code}: {response.text}")
 
 
-# 🎨 Annual Expense Analysis with Theme Switching
+# 🎨 Annual Expense Analysis with Year Grouping
 def annual_analytics_tab():
     st.header("📅 Annual Expense Analytics")
 
-    year_selected = st.slider("Select Year:", min_value=1900, max_value=2100, value=datetime.now().year, key="year_annual_analytics")
-
-    color_scheme = px.colors.sequential.Mint if st.session_state["color_scheme"] == "Mint" else px.colors.sequential.Magenta
-
-    # Initialize theme_choice with the current session theme
-    theme_choice = st.session_state["color_scheme"]
     with st.spinner("Fetching annual analytics... ⏳"):
-        response = requests.post(f"{API_url}/analytics/annual", json={"year_value": year_selected})
+        response = requests.post(f"{API_url}/analytics/annual", json={})
 
         if response.status_code == 200:
             response_data = response.json()
 
-            if "message" in response_data and "data" in response_data:  # ✅ Ensure correct structure
-                analytics_data = response_data["data"]
-            else:
+            if "data" not in response_data:
                 st.error("⚠️ Unexpected API response format for annual analytics.")
-                st.stop()
-
-            # Extract the "data" part
-            data = response_data.get("data", {})
+                return
 
             # Convert to DataFrame
             df = pd.DataFrame([
-                {"category": key, "total": value["total"], "percentage": value["percentage"]}
-                for key, value in data.items()
+                {"year": int(key), "amount": value["amount"]}
+                for key, value in response_data["data"].items()
             ])
+
             if df.empty:
                 st.warning("⚠️ No expenses recorded for this year.")
                 return
 
-            fig = px.pie(df, names="category", values="total", title="💰 Expense Distribution",
-                         hole=0.2, color_discrete_sequence=color_scheme)
+
+
+            # **Step 3: Create Bar Chart**
+            fig = px.bar(df, x="year", y="amount",
+                         title=f"💰Annual Expense Breakdown",
+                         color="year",
+                         text="amount")
+
+            # **Step 4: Label Bars with Year Ranges**
+            fig.update_xaxes(
+                tickmode="array",
+                tickvals=df["year"],
+                ticktext=[f"{y}" for y in df["year"]]
+            )
 
             st.plotly_chart(fig)
 
+            # Theme switcher
             if st.button("🎨 Change Color Theme"):
                 switch_theme()
                 st.rerun()
 
         elif response.status_code == 500:
             st.error("⚠️ Server Error: Please try again later.")
-
         else:
             st.error(f"❌ Unexpected Error {response.status_code}: {response.text}")
