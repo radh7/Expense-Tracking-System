@@ -7,7 +7,7 @@ from datetime import datetime
 logger = logger_setup(os.path.basename(__file__))
 
 @contextmanager
-def get_db_connection(my_host="localhost", my_user="root", my_database="expense_manager",my_password="SSRI9977",commit=False):
+def get_db_connection(my_host="host_name", my_user="user_name", my_database="expense_manager",my_password="your_password",commit=False):
     # Establish connection to MySQL
     connection = mysql.connector.connect(
         host= my_host,
